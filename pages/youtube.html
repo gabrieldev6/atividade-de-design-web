@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8a2d77566a.js" crossorigin="anonymous"></script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(22, 22, 22);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+        }
+
+        * {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+
+        }
+
+        input:focus,
+        select:focus {
+            box-shadow: 0 0 0 0;
+            border: 0 none;
+            outline: 0;
+        }
+
+        header {
+            width: 100%;
+            height: 10%;
+            max-height: 60px;
+            background-color: rgb(22, 22, 22);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .buttonMenu {
+            background-color: none;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            cursor: pointer;
+        }
+        .logo {
+            font-size: xx-large;
+            padding-left: 35px;
+            cursor: pointer;
+        }
+        .logo i {
+            color: red;
+        }
+        .listHeader {
+            width: 95%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+        }
+
+        input {
+            height: 40px;
+            width: 500px;
+            padding: 0px 8px;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+        }
+
+        .frameInput {
+            height: 40px;
+            background-color: rgb(28, 28, 28);
+            border: 1px solid rgb(91, 91, 91);
+            padding: 0px 0px 0px 5px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .contentSearch {
+            height: 100%;
+            width: 60px;
+            background-color: rgb(57, 57, 57);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(91, 91, 91);
+            border-radius: 0px 25px 25px 0px;
+        }
+
+        .buttonRadion {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(57, 57, 57);
+            color: rgb(255, 255, 255);
+            border-radius: 100%;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+        .buttonRadion:hover {
+            background-color: rgb(76, 76, 76);
+        }
+
+        .listTag1 {
+            width: 100%;
+            height: 8%;
+            background-color: rgb(22, 22, 22);
+            display: flex;
+        }
+
+        .listTag2 {
+            width: 100%;
+            display: flex;
+        }
+
+        .itemTag {
+            background-color: rgb(85, 85, 85);
+            color: white;
+            border-radius: 8px;
+            padding: 7px 12px;
+            font: bold;
+            margin: 5px;
+        }
+
+        .itemTag:hover {
+            background-color: rgb(109, 109, 109);
+        }
+
+        .content {
+            width: 100%;
+            height: 90%;
+            display: flex;
+        }
+
+        .leftBar {
+            height: 100%;
+            width: 7%;
+            background-color: rgb(22, 22, 22);
+
+        }
+
+        .leftBarItem {
+            width: 30px;
+            padding: 20px;
+            display: flex;
+            border-radius: 7px;
+            margin: 5px;
+            flex-direction: column;
+            align-items: center;
+            font-size: small;
+            color: rgb(255, 255, 255);
+        }
+
+        .leftBarItem:hover {
+
+            background-color: rgb(67, 67, 67);
+
+        }
+
+        .listVideo {
+            width: 100%;
+            background-color: rgb(22, 22, 22);
+
+        }
+        .contentVideos {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .itemListVideo {
+            width: 330px;
+            height: 240px;
+            padding: 5px ;
+            
+        }
+        .image {
+            width: 320px;
+            height: 160px;
+            background-image: linear-gradient(45deg, rgb(32, 32, 32), gray);
+            border-radius: 5px;
+            display: flex;
+            justify-content: right;
+            align-items: end;
+            color: white;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        .time {
+            
+            background-color: rgba(0, 0, 0, 0.333);
+            padding: 2px;
+            border-radius: 2px;
+            font-size: 10px;
+        }
+        .infoItemVideo {
+            width: 100%;
+            display: flex;
+        }
+    </style>
+</head>
+<!-- algumas estilizações estaram na estrutura pois eram coisas mais simples -->
+<body>
+    <header>
+        <ul class="listHeader">
+            <li style="display: flex; align-items: center;">
+                <div ><button class="buttonMenu"><i class="fa-solid fa-bars"></i></button></div>
+                <div class="logo"><i class="fa-brands fa-youtube"></i>YouTube</div>
+            </li>
+
+            <li style="display: flex; align-items: center;">
+                <div class="frameInput"> <input type="text" placeholder="Pesquisar">
+                    <div class="contentSearch"><i class="fa-solid fa-search"></i></div>
+                </div>
+                <div class="buttonRadion"><i class="fa-solid fa-microphone"></i></div>
+            </li>
+
+            <li style="display: flex; align-items: center;">
+                <div class="buttonRadion"><i class="fa-solid fa-video"></i></div>
+                <div class="buttonRadion"><i class="fa-regular fa-bell"></i></div>
+                <div class="buttonRadion"><i class="fa-solid fa-user"></i></div>
+            </li>
+
+        </ul>
+    </header>
+
+    <div class="content">
+
+        <div class="leftBar">
+            <ul>
+                <li>
+                    <div class="leftBarItem"><i class="fa-solid fa-house"></i><label for="">Inicio</label></div>
+
+                </li>
+
+                <li>
+                    <div class="leftBarItem"><i class="fa-solid fa-arrow-up-short-wide"></i><label for="">Shorts</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="leftBarItem"><i class="fa-regular fa-id-card"></i></i><label for="">Inscrições</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="leftBarItem"><i class="fa-regular fa-thumbs-up"></i><label for="">Você</label></div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="listVideo">
+            <div class="listTag1">
+                <ul class="listTag2">
+                    <li>
+                        <div class="itemTag">Tudo</div>
+                    </li>
+                    <li>
+                        <div class="itemTag">Jogos</div>
+                    </li>
+                    <li>
+                        <div class="itemTag">Música</div>
+                    </li>
+                    <li>
+                        <div class="itemTag">Ao vivo</div>
+                    </li>
+                    <li>
+                        <div class="itemTag">Mixes</div>
+                    </li>
+                    <li>
+                        <div class="itemTag">Lista de reprodução</div>
+                    </li>
+                </ul>
+            </div>
+            
+                <ul class="contentVideos">
+                    <li><div class="itemListVideo">
+                        <div class="image">
+                            <div class="time">15:07</div>
+                        </div>
+    
+                        <div class="infoItemVideo">
+                            <div ><div class="buttonRadion"><i class="fa-solid fa-user"></i></div></div>
+                            <div style="padding-left: 10px; width: 100%;">
+                                <ul style="width: 100%;">
+                                <li style="color: white; display: flex; justify-content: space-between; width: 100%; margin-right: 50px;"><p>Video 1</p><i class="fa-solid fa-ellipsis-vertical" style="padding-right: 10px;"></i></li>
+                                <li style="color: gray; width: 100%;"><p>Nome do canal</p></li>
+                                <li style="color: gray;">2,2m visualizaçãoes</li>
+                            </ul></div>
+                        </div>
+                        
+                        
+                    </div></li>
+                    <li><div class="itemListVideo">
+                        <div class="image">
+                            <div class="time">15:07</div>
+                        </div>
+    
+                        <div class="infoItemVideo">
+                            <div ><div class="buttonRadion"><i class="fa-solid fa-user"></i></div></div>
+                            <div style="padding-left: 10px; width: 100%;">
+                                <ul style="width: 100%;">
+                                <li style="color: white; display: flex; justify-content: space-between; width: 100%; margin-right: 50px;"><p>Video 2</p><i class="fa-solid fa-ellipsis-vertical" style="padding-right: 10px;"></i></li>
+                                <li style="color: gray; width: 100%;"><p>Nome do canal</p></li>
+                                <li style="color: gray;">2,2m visualizaçãoes</li>
+                            </ul></div>
+                        </div>
+                        
+                        
+                    </div></li>
+                    <li><div class="itemListVideo">
+                        <div class="image">
+                            <div class="time">15:07</div>
+                        </div>
+    
+                        <div class="infoItemVideo">
+                            <div ><div class="buttonRadion"><i class="fa-solid fa-user"></i></div></div>
+                            <div style="padding-left: 10px; width: 100%;">
+                                <ul style="width: 100%;">
+                                <li style="color: white; display: flex; justify-content: space-between; width: 100%; margin-right: 50px;"><p>Video 3</p><i class="fa-solid fa-ellipsis-vertical" style="padding-right: 10px;"></i></li>
+                                <li style="color: gray; width: 100%;"><p>Nome do canal</p></li>
+                                <li style="color: gray;">2,2m visualizaçãoes</li>
+                            </ul></div>
+                        </div>
+                        
+                        
+                    </div></li>
+                    <li><div class="itemListVideo">
+                        <div class="image">
+                            <div class="time">15:07</div>
+                        </div>
+    
+                        <div class="infoItemVideo">
+                            <div ><div class="buttonRadion"><i class="fa-solid fa-user"></i></div></div>
+                            <div style="padding-left: 10px; width: 100%;">
+                                <ul style="width: 100%;">
+                                <li style="color: white; display: flex; justify-content: space-between; width: 100%; margin-right: 50px;"><p>Video 4</p><i class="fa-solid fa-ellipsis-vertical" style="padding-right: 10px;"></i></li>
+                                <li style="color: gray; width: 100%;"><p>Nome do canal</p></li>
+                                <li style="color: gray;">2,2m visualizaçãoes</li>
+                            </ul></div>
+                        </div>
+                        
+                        
+                    </div></li>
+                    <li><div class="itemListVideo">
+                        <div class="image">
+                            <div class="time">15:07</div>
+                        </div>
+    
+                        <div class="infoItemVideo">
+                            <div ><div class="buttonRadion"><i class="fa-solid fa-user"></i></div></div>
+                            <div style="padding-left: 10px; width: 100%;">
+                                <ul style="width: 100%;">
+                                <li style="color: white; display: flex; justify-content: space-between; width: 100%; margin-right: 50px;"><p>Video 5</p><i class="fa-solid fa-ellipsis-vertical" style="padding-right: 10px;"></i></li>
+                                <li style="color: gray; width: 100%;"><p>Nome do canal</p></li>
+                                <li style="color: gray;">2,2m visualizaçãoes</li>
+                            </ul></div>
+                        </div>
+                        
+                        
+                    </div></li>
+                    
+                </ul>
+                
+            
+            
+        </div>
+    </div>
+</body>
+
+</html>

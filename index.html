@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Web</title>
+    <script src="https://kit.fontawesome.com/8a2d77566a.js" crossorigin="anonymous"></script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        }
+
+        * {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            
+        }
+
+        header {
+            width: 100%;
+            height: 10%;
+            max-height: 60px;
+            background-color: rgb(27, 27, 27);
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        .frameInput {
+            width: 220px ;
+            height: 30px;
+            background-color: white;
+            color: rgb(30, 30, 30);
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            padding: 0px 5px;
+        }
+        input {
+            margin-left: 5px;
+        }
+        .buttonMenu {
+            height: 30px;
+            width: 200px;
+            background-color: rgb(27, 27, 27);
+            color: white;
+            font: bold;
+            border-radius: 5px;
+            margin-top: 5px;
+            padding: 0px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        a {
+            text-decoration: none;
+        }
+        .buttonMenu:hover {
+            background-color: rgb(50, 50, 50);
+            
+        }
+
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .listButton {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>Listas de atividade</p>
+        <div class="frameInput"> <i class="fa-solid fa-search"></i><input type="text" name="" id="" placeholder="isso é so de enfeite kkk"></div>
+    </header>
+    <div class="content">
+
+        <ul class="listButton">
+            <li><a href="./pages/whatsapp.html"><button class="buttonMenu">Tela Whatsapp <i class="fa-brands fa-whatsapp"></i></button> </a></li>
+            <li><a href=".pages/calendario.html"><button class="buttonMenu">Tela Calendário <i class="fa-solid fa-calendar"></i></button></a></li>
+            <li><a href="./pages/youtube.html"><button class="buttonMenu">Tela Youtube <i class="fa-brands fa-youtube"></i></button></a></li>
+            <li><a href="./pages/windows.html"><button class="buttonMenu">Tela Windows <i class="fa-brands fa-windows"></i></button></a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
